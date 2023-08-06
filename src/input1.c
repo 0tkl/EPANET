@@ -348,8 +348,6 @@ void inittanks(Project *pr)
 
     int i, j, n = 0;
     double a;
-    int errcode = 0;
-    char errmsg[MAXMSG+1] = "";
     Stank *tank;
     Scurve *curve;
 
@@ -505,7 +503,6 @@ void convertunits(Project *pr)
     Network  *net = &pr->network;
     Hydraul  *hyd = &pr->hydraul;
     Quality  *qual = &pr->quality;
-    Parser   *parser = &pr->parser;
 
     int i, j, k;
     double ucf;     // Unit conversion factor

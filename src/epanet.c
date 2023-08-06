@@ -4473,7 +4473,6 @@ int DLLEXPORT EN_setheadcurveindex(EN_Project p, int linkIndex, int curveIndex)
     Network *net = &p->network;
 
     int pumpIndex;
-    int err = 0;
     Spump *pump;
 
     // Check for valid parameters
