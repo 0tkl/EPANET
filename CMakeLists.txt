@@ -25,7 +25,7 @@
 #   CMake is available at https://cmake.org/download/
 #
 
-cmake_minimum_required (VERSION 2.8.8)
+cmake_minimum_required (VERSION 3.16)
 
 project(EPANET)
 
@@ -80,6 +80,7 @@ IF (MSVC)
   set(CMAKE_C_FLAGS_RELEASE "/GL")
   add_definitions(-D_CRT_SECURE_NO_DEPRECATE -MT)
 ENDIF (MSVC)
+add_compile_options(-Wall -pedantic -pedantic-errors)
 
 # configure file groups
 file(GLOB EPANET_SOURCES RELATIVE ${PROJECT_SOURCE_DIR} src/*.c src/util/*.c)

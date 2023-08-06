@@ -1,5 +1,5 @@
 # EPANET COMMAND LINE EXECUTABLE
-cmake_minimum_required (VERSION 2.8.8)
+cmake_minimum_required (VERSION 3.16)
 
 
 # Sets for output directory for executables and libraries.
@@ -15,7 +15,7 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 IF (MSVC)
   add_definitions(-D_CRT_SECURE_NO_DEPRECATE -MT)
 ENDIF (MSVC)
-
+add_compile_options(-Wall -pedantic -pedantic-errors)
 
 # Set up file groups for exe target
 set(EPANET_CLI_SOURCES main.c)
