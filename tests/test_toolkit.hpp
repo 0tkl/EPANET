@@ -16,6 +16,7 @@
 
 #include "epanet2_2.h"
 
+#include <math.h>
 
 #define DATA_PATH_NET1 "./net1.inp"
 #define DATA_PATH_TMP "./tmp.inp"

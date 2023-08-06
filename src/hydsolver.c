@@ -279,14 +279,14 @@ int  pswitch(Project *pr)
     Hydraul *hyd = &pr->hydraul;
     Report  *rpt = &pr->report;
 
-    int   i,                 // Control statement index
-          k,                 // Index of link being controlled
-          n,                 // Node controlling link k
-          reset,             // Flag on control conditions
-          change,            // Flag for status or setting change
-          anychange = 0;     // Flag for 1 or more control actions
-    char  s;                 // Current link status
-    Slink *link;
+    int        i,                 // Control statement index
+               k,                 // Index of link being controlled
+               n,                 // Node controlling link k
+               reset,             // Flag on control conditions
+               change,            // Flag for status or setting change
+               anychange = 0;     // Flag for 1 or more control actions
+    StatusType s;                 // Current link status
+    Slink      *link;
 
     // Check each control statement
     for (i = 1; i <= net->Ncontrols; i++)

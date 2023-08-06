@@ -91,14 +91,14 @@ int validatepatterns(Project *pr)
     int j, result = 1;
     char errmsg[MAXMSG+1] = "";
 
-    if (pr->network.Pattern != NULL)
+    if (net->Pattern != NULL)
     {
-        for (j = 0; j <= pr->network.Npats; j++)
+        for (j = 0; j <= net->Npats; j++)
         {
-            if (pr->network.Pattern[j].Length == 0)
+            if (net->Pattern[j].Length == 0)
             {
                 sprintf(pr->Msg, "Error 232: %s %s", geterrmsg(232, errmsg),
-                    pr->network.Pattern[j].ID);
+                    net->Pattern[j].ID);
                 writeline(pr, pr->Msg);
                 result = 0;
             }
