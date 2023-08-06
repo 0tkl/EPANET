@@ -1149,7 +1149,6 @@ int setcontrol(EN_Project p, int type, int linkIndex, double setting,
 */
 {
     Network *net = &p->network;
-    Parser *parser = &p->parser;
     
     long t = 0;
     double lvl = 0.0, s = MISSING;
