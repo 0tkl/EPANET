@@ -1231,6 +1231,7 @@ int setcontrol(EN_Project p, int type, int linkIndex, double setting,
     control->Setting = s;
     control->Time = t;
     control->Grade = lvl;
+    control->isEnabled = TRUE;
     return 0;
 }
 
