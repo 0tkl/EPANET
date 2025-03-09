@@ -6,6 +6,7 @@
 #         US EPA ORD/NRMRL
 #
 
+cmake_minimum_required (VERSION 3.21)
 
 # Sets for output directory for executables and libraries.
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
@@ -24,6 +25,11 @@ IF (MSVC)
   add_definitions(-D_CRT_SECURE_NO_DEPRECATE -MT)
 ENDIF (MSVC)
 
+if (MSVC)
+  add_compile_options(/W4) # /WX
+else()
+  add_compile_options(-Wall -Wextra -pedantic -pedantic-errors)
+endif()
 
 # configure file groups
 set(EPANET_OUT_SOURCES  src/epanet_output.c

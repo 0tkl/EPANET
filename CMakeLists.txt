@@ -25,7 +25,7 @@
 #   CMake is available at https://cmake.org/download/
 #
 
-cmake_minimum_required (VERSION 3.5.2)
+cmake_minimum_required (VERSION 3.21)
 
 project(EPANET)
 
@@ -81,6 +81,12 @@ IF (MSVC)
   add_definitions(-D_CRT_SECURE_NO_DEPRECATE -MT)
 ENDIF (MSVC)
 
+if (MSVC)
+  add_compile_options(/W4) # /WX
+else()
+  add_compile_options(-Wall -Wextra -pedantic -pedantic-errors)
+endif()
+
 # configure file groups
 file(GLOB EPANET_SOURCES RELATIVE ${PROJECT_SOURCE_DIR} src/*.c src/util/*.c)
 file(GLOB EPANET_LIB_ALL RELATIVE ${PROJECT_SOURCE_DIR} src/* src/util/*)
@@ -98,6 +104,12 @@ IF(MSVC AND "${CMAKE_VS_PLATFORM_NAME}" MATCHES "(Win32)")
 ELSE(TRUE)
   add_library(epanet2 ${EPANET_LIB_ALL})
 ENDIF(MSVC AND "${CMAKE_VS_PLATFORM_NAME}" MATCHES "(Win32)")
+
+set_target_properties(epanet2
+  PROPERTIES
+    C_STANDARD 23
+    C_STANDARD_REQUIRED YES
+)
 
 target_include_directories(epanet2 PUBLIC ${PROJECT_SOURCE_DIR}/include)
 

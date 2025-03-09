@@ -6,13 +6,13 @@
 # Modified by: Michael E. Tryby
 #              US EPA ORD/NRMRL
 #
-
+cmake_minimum_required (VERSION 3.21)
 
 # Sets for output directory for executables and libraries.
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 if(UNIX)
-    set(CMAKE_CXX_FLAGS "-std=c++11")
+    set(CMAKE_CXX_FLAGS "-std=c++23")
 endif(UNIX)
 
 
