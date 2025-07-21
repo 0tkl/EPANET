@@ -244,7 +244,7 @@ int  nexthyd(Project *pr, long *tstep)
 **  Output:  tstep = pointer to time step (in seconds)
 **  Returns: error code
 **  Purpose: finds length of next time step & updates tank
-**           levels and rule-based contol actions
+**           levels and rule-based control actions
 **--------------------------------------------------------------
 */
 {

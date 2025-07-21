@@ -22,7 +22,7 @@ In addition, two Windows one-click-build scripts are included in the `win_build`
 
 These two scripts build EPANET binaries for both the 32 and 64 bit Windows platforms, placing them in the `win_build\32bit` and `win_build\64bit` directories, respectively.
 
-A tutorial on [building OWA EPANET from source on Windows](tools/BuildAndTest.md), including running unit tests and performing regression testing, is also avaiable.
+A tutorial on [building OWA EPANET from source on Windows](tools/BuildAndTest.md), including running unit tests and performing regression testing, is also available.
 
 ## Alternative build with Conan
 Conan is an increasingly popular C/C++ package management suite. To build EPANET using Conan, use the following commands as a starting point:

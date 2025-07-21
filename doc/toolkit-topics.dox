@@ -372,7 +372,7 @@ These are the toolkit's enumerated types whose members are used as function argu
 | 241  | Function call refers to nonexistent control |
 | 250  | Function call contains invalid format (e.g. too long an ID name) |
 | 251  | Function call contains invalid parameter code |
-| 252  | Function call rferes to an invalid ID name |
+| 252  | Function call refers to an invalid ID name |
 | 253  | Function call refers to nonexistent demand category |
 | 254  | Function call refers to node with no coordinates |
 | 255  | Function call refers to link with no vertices |

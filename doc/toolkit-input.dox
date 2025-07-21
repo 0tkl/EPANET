@@ -721,7 +721,7 @@ Each rule is a series of statements of the form:
 where:
 <table style = "border: 0px solid black">
 <tr> <td><I>ruleID</I></td> <td> = </td> <td> &nbsp;an ID label assigned to the rule</td> </tr>
-<tr> <td><I>conditon_n</I></td> <td> = </td> <td> &nbsp;a @subpage ConditionClauses "condition clause"</td> </tr>
+<tr> <td><I>condition_n</I></td> <td> = </td> <td> &nbsp;a @subpage ConditionClauses "condition clause"</td> </tr>
 <tr> <td><I>action_n</I></td> <td> = </td> <td> &nbsp;an @subpage ActionClauses "action clause"</td> </tr>
 <tr> <td><B>PRIORITY</B></td> <td> = </td> <td> &nbsp;a priority value (e.g., a number from 1 to 5)</td> </tr>
 </table>
